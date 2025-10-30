@@ -1,0 +1,148 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.bg-animated {
+	background:
+		radial-gradient(circle at top left, rgba(64, 153, 221, 0.3), transparent 40%),
+		radial-gradient(circle at top right, rgba(64, 153, 221, 0.3), transparent 40%),
+		radial-gradient(circle at bottom left, rgba(64, 153, 221, 0.3), transparent 40%),
+		radial-gradient(circle at bottom right, rgba(64, 153, 221, 0.3), transparent 40%);
+	background-color: #121212;
+	background-blend-mode: screen;
+	background-size: 200% 200%;
+	animation: gradientFloat 20s ease-in-out infinite;
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+}
+@import 'tailwindcss';
+
+body {
+	background-color: #121212;
+	color: #ffffff;
+	font-family: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+.bg-animated-sm {
+	background:
+		radial-gradient(circle at top left, rgba(64, 153, 221, 0.3), transparent 40%),
+		radial-gradient(circle at top right, rgba(64, 153, 221, 0.3), transparent 40%),
+		radial-gradient(circle at bottom left, rgba(64, 153, 221, 0.3), transparent 40%),
+		radial-gradient(circle at bottom right, rgba(64, 153, 221, 0.3), transparent 40%);
+	background-color: #121212;
+	background-blend-mode: screen;
+	background-size: 200% 200%;
+	animation: gradientFloat 20s ease-in-out infinite;
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+}
+@keyframes pulseGlow {
+	0%,
+	100% {
+		opacity: 0.4;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.6;
+		transform: scale(1.05);
+	}
+}
+
+.glass {
+	background-color: var(--color-glass-light);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
+	border-radius: 1rem;
+	/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25); */
+}
+
+@keyframes gradientMove {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradientFloat {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
+/* THEME */
+@theme {
+	--color-primary: #4099dd;
+	--color-primary-80: rgba(64, 153, 221, 0.8);
+	--color-primary-60: rgba(64, 153, 221, 0.6);
+	--color-primary-40: rgba(64, 153, 221, 0.4);
+	--color-primary-20: rgba(64, 153, 221, 0.2);
+	--color-background: #121212;
+	--color-foreground: #181818;
+	--color-foreground-80: rgba(24, 24, 24, 0.8);
+	--color-foreground-60: rgba(24, 24, 24, 0.6);
+	--color-foreground-40: rgba(24, 24, 24, 0.4);
+	--color-foreground-20: rgba(24, 24, 24, 0.2);
+	--color-glass-light: rgba(255, 255, 255, 0.05);
+	--color-glass-dark: rgba(0, 0, 0, 0.3);
+	--color-text-primary: #ffffff;
+	--color-text-secondary: #a1a1aa;
+	--color-text-secondary-80: rgba(161, 161, 170, 0.8);
+	--color-text-secondary-60: rgba(161, 161, 170, 0.6);
+	--color-text-secondary-40: rgba(161, 161, 170, 0.4);
+	--color-text-secondary-20: rgba(161, 161, 170, 0.2);
+	--font-family-sans: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Subtle grow-on-hover utility
+   Usage: add `hoverGrow` to any block to enable a smooth, non-tacky scale and shadow on hover.
+*/
+.hoverGrow {
+	transform: translateZ(0); /* promote to its own layer for smoother animation */
+	transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
+	will-change: transform, box-shadow;
+}
+.hoverGrow:hover,
+.hoverGrow:focus-visible {
+	transform: scale(1.045);
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+	.hoverGrow {
+		transition: none;
+		will-change: auto;
+	}
+	.hoverGrow:hover,
+	.hoverGrow:focus-visible {
+		transform: none;
+	}
+}
+
+@keyframes floatUpDown {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.floatUpDown {
+	animation: floatUpDown 5s ease-in-out infinite;
+}
