@@ -8,7 +8,7 @@ export default function EmailSignup() {
 	const submitForm = async (e: React.FormEvent) => {
 		e.preventDefault();
 		try {
-			await axios.post(`${process.env.API_ADDRESS}/api/waitlist`, { email });
+			await axios.post(`${process.env.NEXT_PUBLIC_API_ADDRESS}/api/waitlist`, { email });
 			setSubmitted(true);
 		} catch (error) {
 			console.error('Error submitting email:', error);
