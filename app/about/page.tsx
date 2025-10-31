@@ -1,8 +1,6 @@
 'use client';
 
-import Button from '@/components/common/Button';
 import EmailSignup from '@/components/forms/EmailSignup';
-import Link from 'next/link';
 
 export default function AboutPage() {
 	return (
