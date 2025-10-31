@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Button from '@/components/common/Button';
+import { AxiosError } from 'axios';
 
 export default function WaitlistPage() {
 	const [firstName, setFirstName] = useState('');
@@ -16,8 +17,9 @@ export default function WaitlistPage() {
 		try {
 			await axios.post('http://localhost:8080/api/waitlist', { firstName, lastName, email });
 			setSubmitted(true);
-		} catch (err: any) {
-			if (err.response?.status === 409) {
+		} catch (err: unknown) {
+			const axiosError = err as AxiosError;
+			if (axiosError.response?.status === 409) {
 				setAlreadyOnList(true);
 			} else {
 				console.error('Error:', err);

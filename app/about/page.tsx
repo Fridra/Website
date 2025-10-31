@@ -10,7 +10,7 @@ export default function AboutPage() {
 					About <span className='text-primary'>Fridra</span>
 				</h1>
 				<p className='text-textSecondary text-lg md:text-xl max-w-3xl mx-auto'>
-					Fridra was built to make healthy eating simple and personalized. Whether you're an
+					Fridra was built to make healthy eating simple and personalized. Whether you&apos;re an
 					athlete, a busy professional, or just looking to eat better, Fridra tailors smart plans to
 					your unique lifestyle.
 				</p>
@@ -28,9 +28,9 @@ export default function AboutPage() {
 				<div className='glass rounded-xl p-8 shadow-md'>
 					<h2 className='text-2xl font-semibold mb-4'>The Team</h2>
 					<p className='text-textSecondary'>
-						We're a small team of engineers, designers, and nutrition nerds who are passionate about
-						making food intelligent. Our goal is to combine science and simplicity to help people
-						thrive.
+						We&apos;re a small team of engineers, designers, and nutrition nerds who are passionate
+						about making food intelligent. Our goal is to combine science and simplicity to help
+						people thrive.
 					</p>
 				</div>
 			</section>
