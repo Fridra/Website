@@ -4,14 +4,19 @@ import { useState } from 'react';
 export default function EmailSignup() {
 	const [email, setEmail] = useState('');
 	const [submitted, setSubmitted] = useState(false);
+	const [alreadySubmitted, setAlreadySubmitted] = useState(false);
 
 	const submitForm = async (e: React.FormEvent) => {
 		e.preventDefault();
 		try {
 			await axios.post(`${process.env.NEXT_PUBLIC_API_ADDRESS}/api/waitlist`, { email });
 			setSubmitted(true);
-		} catch (error) {
-			console.error('Error submitting email:', error);
+		} catch (error: any) {
+			if (error.response?.status === 409) {
+				setAlreadySubmitted(true);
+			} else {
+				console.error('Error submitting email:', error);
+			}
 		}
 	};
 
@@ -19,6 +24,14 @@ export default function EmailSignup() {
 		return (
 			<p className='text-center text-lg font-semibold text-green-400 mt-8'>
 				🎉 Thank you! You’ve been added to the waitlist.
+			</p>
+		);
+	}
+
+	if (alreadySubmitted) {
+		return (
+			<p className='text-center text-lg font-semibold text-green-400 mt-8'>
+				🎉 You're already on the waitlist!
 			</p>
 		);
 	}
