@@ -66,8 +66,8 @@ export default function Home() {
 			{/* Features */}
 			<section className='py-20 px-6' id='features'>
 				<h2 className='text-3xl font-bold text-center'>Powerful Features</h2>
-				<div className='mt-12 max-w-6xl mx-auto flex flex-row justify-center items-stretch'>
-					<div className='flex-1'></div>
+				<div className='mt-12 max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-stretch'>
+					<div className='md:flex-1'></div>
 					<div className=' flex-3 flex flex-col justify-center gap-10'>
 						{[
 							{
@@ -87,28 +87,26 @@ export default function Home() {
 								desc: 'Suggest meals from what’s already at home.',
 							},
 						].map(({ title, desc }, i) => (
-							<div key={i}>
+							<div key={i} className='text-center'>
 								<h3 className='text-xl font-semibold text-primary'>{title}</h3>
 								<p className='mt-2 text-textSecondary'>{desc}</p>
 							</div>
 						))}
 					</div>
-					<div className='flex-2 relative min-h-[400px]'>
-						<div className='floatUpDown h-full w-full relative'>
-							<Image
-								src='/image-left.png'
-								alt='App preview'
-								fill
-								className='object-contain rounded-lg'
-							/>
-						</div>
+					<div className='flex-2 w-full relative min-h-[400px] mt-10 md:mt-0'>
+						<Image
+							src='/image-left.png'
+							alt='App preview'
+							fill
+							className='object-contain rounded-lg floatUpDown'
+						/>
 					</div>
-					<div className='flex-1'></div>
+					<div className='md:flex-1'></div>
 				</div>
 			</section>
 
 			{/* About */}
-			<section className='flex justify-center py-20'>
+			<section className='flex justify-center py-20 px-6'>
 				<div className='py-20 px-6 glass'>
 					<h2 className='text-3xl font-bold text-center text-white'>Why Fridra?</h2>
 					<p className='mt-4 text-lg max-w-2xl mx-auto text-textSecondary text-center'>
