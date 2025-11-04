@@ -53,14 +53,19 @@ export default function AboutPage() {
 			</section> */}
 
 			{/* Meet the Founder */}
-			<section className='text-center max-w-3xl mx-auto mb-24'>
+			<section className='text-center max-w-4xl mx-auto mb-24'>
 				<h2 className='text-2xl font-semibold mb-4'>Meet the Founder</h2>
-				<p className='text-textSecondary mb-4'>
-					Hi, I'm Liam — a passionate engineer and athlete who built Fridra to solve a personal
-					problem: making healthy eating fit my lifestyle. I hope it helps you too.
-				</p>
-				<div className='w-24 h-24 mx-auto rounded-full bg-white/10 flex items-center justify-center text-xl font-bold text-primary'>
-					LM
+				<div className='flex justify-center'>
+					<div className=''>
+						<p className='text-textSecondary mb-4'>
+							Hi, I'm Liam — a passionate engineer and athlete who built Fridra to solve a personal
+							problem: making healthy eating fit my lifestyle. I hope it helps you too.
+						</p>
+						<div className='w-24 h-24 mx-auto rounded-full bg-white/10 flex items-center justify-center text-xl font-bold text-primary'>
+							LM
+						</div>
+					</div>
+					<div className=''></div>
 				</div>
 			</section>
 
