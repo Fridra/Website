@@ -39,13 +39,13 @@ export default function EmailSignup() {
 	return (
 		<>
 			<form
-				className='mt-8 flex flex-col md:flex-row items-center justify-center gap-4'
+				className='mt-8 flex flex-col w-full md:flex-row items-center justify-center gap-4'
 				onSubmit={submitForm}
 			>
 				<input
 					type='email'
 					placeholder='Enter your email'
-					className='border-1 border-white px-4 py-2 rounded-md  w-full md:w-72'
+					className='border-1 border-white px-4 py-2 text-center md:text-start rounded-md w-3/4 md:w-72'
 					value={email}
 					onChange={(e) => {
 						setEmail(e.target.value);
