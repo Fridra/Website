@@ -42,7 +42,7 @@ export default function AboutPage() {
 			{/* <section className='text-center max-w-4xl mx-auto mb-24'>
 				<h2 className='text-2xl font-semibold mb-4'>In Collaboration With</h2>
 				<p className='text-textSecondary'>
-					We're working with leading dietitians, fitness coaches, and health tech advisors to bring
+					We&apos;re working with leading dietitians, fitness coaches, and health tech advisors to bring
 					you the smartest food assistant.
 				</p>
 				<div className='mt-6 flex flex-wrap justify-center gap-6'>
@@ -60,8 +60,8 @@ export default function AboutPage() {
 				<div className='flex justify-center'>
 					<div className=''>
 						<p className='text-textSecondary mb-4'>
-							Hi, I'm Liam — a passionate engineer and athlete who built Fridra to solve a personal
-							problem: making healthy eating fit my lifestyle. I hope it helps you too.
+							Hi, I&apos;m Liam — a passionate engineer and athlete who built Fridra to solve a
+							personal problem: making healthy eating fit my lifestyle. I hope it helps you too.
 						</p>
 						<div className='w-24 h-24 mx-auto rounded-full bg-white/10 flex items-center justify-center text-xl font-bold text-primary'>
 							LM
@@ -87,9 +87,9 @@ export default function AboutPage() {
 						👥 The Team
 					</h2>
 					<p className='text-textSecondary text-center'>
-						We're a small team of engineers, athletes, and nutrition nerds who are passionate about
-						making food intelligent. Our goal is to combine science and simplicity to help people
-						thrive.
+						We&apos;re a small team of engineers, athletes, and nutrition nerds who are passionate
+						about making food intelligent. Our goal is to combine science and simplicity to help
+						people thrive.
 					</p>
 				</div>
 			</section>

@@ -23,7 +23,7 @@ export default function EmailSignup() {
 	if (submitted) {
 		return (
 			<p className='text-center text-lg font-semibold text-green-400 mt-8'>
-				🎉 Thank you! You’ve been added to the waitlist.
+				🎉 Thank you! You&apos;ve been added to the waitlist.
 			</p>
 		);
 	}
@@ -31,7 +31,7 @@ export default function EmailSignup() {
 	if (alreadySubmitted) {
 		return (
 			<p className='text-center text-lg font-semibold text-green-400 mt-8'>
-				🎉 You're already on the waitlist!
+				🎉 You&apos;re already on the waitlist!
 			</p>
 		);
 	}
