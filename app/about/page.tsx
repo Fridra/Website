@@ -30,7 +30,7 @@ export default function AboutPage() {
 			</section>
 
 			{/* Testimonial */}
-			<section className='text-center max-w-3xl mx-auto mb-24'>
+			<section className='text-center max-w-3xl mx-auto mb-24 glass p-6 shadow-md'>
 				<blockquote className='italic text-textSecondary'>
 					"Fridra made meal planning effortless. It’s like having a personal nutritionist on
 					demand."
@@ -53,8 +53,10 @@ export default function AboutPage() {
 			</section> */}
 
 			{/* Meet the Founder */}
-			<section className='text-center max-w-4xl mx-auto mb-24'>
-				<h2 className='text-2xl font-semibold mb-4'>Meet the Founder</h2>
+			<section className='text-center max-w-4xl mx-auto mb-24 glass p-6 shadow-md'>
+				<h2 className='text-2xl font-semibold mb-4'>
+					Meet the <span className='text-primary'>Founder</span>
+				</h2>
 				<div className='flex justify-center'>
 					<div className=''>
 						<p className='text-textSecondary mb-4'>
@@ -72,7 +74,7 @@ export default function AboutPage() {
 			<section className='max-w-3xl mx-auto space-y-12 mb-24'>
 				<div className='rounded-xl border border-white/10 p-8 bg-white/5 shadow-md'>
 					<h2 className='text-2xl font-semibold mb-2 flex items-center gap-2 justify-center'>
-						🌱 Our Mission
+						🌱 Our <span className='text-green-600'>Mission</span>
 					</h2>
 					<p className='text-textSecondary text-center'>
 						We believe that nutrition should be personalized, data-driven, and effortless. Our
