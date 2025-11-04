@@ -32,8 +32,8 @@ export default function AboutPage() {
 			{/* Testimonial */}
 			<section className='text-center max-w-3xl mx-auto mb-24 glass p-6 shadow-md'>
 				<blockquote className='italic text-textSecondary'>
-					"Fridra made meal planning effortless. It’s like having a personal nutritionist on
-					demand."
+					&quot;Fridra made meal planning effortless. It&rsquo;s like having a personal nutritionist
+					on demand.&quot;
 				</blockquote>
 				<p className='mt-2 font-semibold'>— Alyssa R., Early Tester</p>
 			</section>
