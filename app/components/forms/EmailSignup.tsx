@@ -11,8 +11,8 @@ export default function EmailSignup() {
 		try {
 			await axios.post(`${process.env.NEXT_PUBLIC_API_ADDRESS}/api/waitlist`, { email });
 			setSubmitted(true);
-		} catch (error: any) {
-			if (error.response?.status === 409) {
+		} catch (error: unknown) {
+			if (axios.isAxiosError(error) && error.response?.status === 409) {
 				setAlreadySubmitted(true);
 			} else {
 				console.error('Error submitting email:', error);
